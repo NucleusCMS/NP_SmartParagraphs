@@ -3,7 +3,7 @@ class NP_SmartParagraphs extends NucleusPlugin {
     function getName() { return 'SmartParagraphs'; }
     function getAuthor() { return 'Traweb'; }
     function getURL() { return 'http://www.traweb.com/extra/nucleusplugin/'; }
-    function getVersion() { return '1.5'; }
+    function getVersion() { return '1.6'; }
     function getDescription() {
     return 'This plugin will convert line breaks and paragraphs in your entries, by adding the corresponding markup tags to produce valid HTML or XHTML. It is smart enough not to insert these tags in places where they may conflict with block elements and other HTML markup tags you may already be using in your posts. Basically, this is a more powerful line break converter than the default one embedded in Nucleus. It is now based entirely on the autop script by Matthew Mullenweg - see at see at http://photomatt.net/scripts/autop.';
     }
