@@ -30,7 +30,7 @@ class NP_SmartParagraphs extends NucleusPlugin {
         $this->undoSmartParagraphs($data['item']->more);
     }
     
-    function autop(&$pee, $br=1) {
+    function autop($pee, $br=1) {
     
         $pee = $pee . "\n"; // just to make things a little easier, pad the end
         $pee = preg_replace('|<br />\s*<br />|', "\n\n", $pee);
@@ -51,13 +51,13 @@ class NP_SmartParagraphs extends NucleusPlugin {
         $pee = preg_replace('/&([^#])(?![a-z]{1,8};)/', '&#038;$1', $pee);
     }
     
-    function doSmartParagraphs(&$data) {
+    function doSmartParagraphs($data) {
         if (strlen($data) ) {
             $this->autop($data);
         }
     }
     
-    function undoSmartParagraphs(&$data) {
+    function undoSmartParagraphs($data) {
         $data = str_replace("<p>",'',$data);
         $data = str_replace("</p>\n\n","\n\n",$data);
         $data = str_replace("<br />\n","\n",$data);
